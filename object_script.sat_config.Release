@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\satconfigsys.o
+./release\parampushbutton.o
+./release\parameditdialog.o
+./release\station.o
+./release\stationeditdialog.o
+./release\satellite.o
+./release\moc_mainwindow.o
+./release\moc_parameditdialog.o
+./release\moc_stationeditdialog.o
+);

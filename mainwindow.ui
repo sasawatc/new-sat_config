@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>727</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Satellite Configuration</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="scc_tab">
+       <attribute name="title">
+        <string>SCC</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="scc_gridLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="scc_table_head_label">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>I_CMOB</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="scc_tableView"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mpc_pl_tab">
+       <attribute name="title">
+        <string>MPC_PL</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="mpc_pl_buttons_horizontalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="mpc_pl_stations_layout">
+            <item>
+             <widget class="QLabel" name="mpc_pl_stations_label">
+              <property name="text">
+               <string>Stations:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="mpc_pl_stations_gridLayout"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="mpc_pl_satellites_layout"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="mpc_pl_table_head_label">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>I_CNFM</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="mpc_pl_tableView"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mpc_aocs_tab">
+       <attribute name="title">
+        <string>MPC_AOCS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QGridLayout" name="mpc_aocs_gridLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="mpc_aocs_table_head_label">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>I_CMOB</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="mpc_aocs_tableView"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fds_tab">
+       <attribute name="title">
+        <string>FDS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QGridLayout" name="fds_gridLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="fds_table_head_label">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>I_CNFF</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="fds_tableView"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSave_changed">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave_to_conf_sat_txt"/>
+    <addaction name="separator"/>
+    <addaction name="actionTransfer_files"/>
+   </widget>
+   <widget class="QMenu" name="menuType">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuSave_changed"/>
+   <addaction name="menuType"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave_Changed">
+   <property name="text">
+    <string>Save file</string>
+   </property>
+  </action>
+  <action name="actionSave_and_Send_file">
+   <property name="text">
+    <string>Send file</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionSCC">
+   <property name="text">
+    <string>SCC</string>
+   </property>
+  </action>
+  <action name="actionMPC_PL">
+   <property name="text">
+    <string>MPC_PL</string>
+   </property>
+  </action>
+  <action name="action_MPC_AOCS">
+   <property name="text">
+    <string>
+MPC_AOCS</string>
+   </property>
+  </action>
+  <action name="actionFDS">
+   <property name="text">
+    <string>FDS</string>
+   </property>
+  </action>
+  <action name="actionTransfer_files">
+   <property name="text">
+    <string>Transfer files</string>
+   </property>
+  </action>
+  <action name="actionSave_to_conf_sat_txt">
+   <property name="text">
+    <string>Save to conf_sat.txt</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
