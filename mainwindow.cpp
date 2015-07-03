@@ -34,7 +34,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mpc_pl_tableView->verticalHeader()->setVisible(false);
     ui->mpc_aocs_tableView->verticalHeader()->setVisible(false);
     ui->fds_tableView->verticalHeader()->setVisible(false);
+
     connect(ui->actionTransfer_files,SIGNAL(triggered()),this,SLOT(onTransferFilesTriggered()));
+    connect(ui->actionSave_to_conf_sat_txt,SIGNAL(triggered()),this,SLOT(onSaveToConfSatTriggered()));
 
 
 }
@@ -206,6 +208,10 @@ void MainWindow::onSatelliteClicked()
 
 void MainWindow::onTransferFilesTriggered(){
     emit transferFilesClicked();
+}
+
+void MainWindow::onSaveToConfSatTriggered(){
+    emit saveToConfSatClicked();
 }
 
 MainWindow::~MainWindow()

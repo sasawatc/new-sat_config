@@ -36,7 +36,8 @@ public:
     QList<Satellite *> * getSatellitesFromMpcPl();
 
 public slots:
-    void ontransferFilesClicked();
+    void onTransferFilesClicked();
+    void onSaveToConfSatClicked();
 
 private:
     void importSatConfig(QString filepath);

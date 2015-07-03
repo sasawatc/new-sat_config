@@ -35,7 +35,8 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
     main_window.setModel(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel);
     main_window.createButtons(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel, stations, satellites);
 
-//    connect(main_window, SIGNAL())
+    connect(&main_window, SIGNAL(transferFilesTriggered()),this,SLOT(onTransferFilesClicked()));
+    connect(&main_window, SIGNAL(saveToConfSatClicke()),this,SLOT(onSaveToConfSatClicked()));
 
 
     app.exec();
@@ -45,11 +46,6 @@ SatConfigSys::~SatConfigSys()
 {
 
 }
-
-void SatConfigSys::ontransferFilesClicked(){
-    return;
-}
-
 void SatConfigSys::importSatConfig(QString filepath)
 {
     QFile sat_config_file(filepath);
@@ -198,10 +194,41 @@ QString SatConfigSys::getCurrentParamValue(QSortFilterProxyModel* model, int row
     }
 }
 
-//void SatConfigSys::saveGroupsToFile()
-//{
-//    scc_proxyModel->
-//}
+void SatConfigSys::onSaveToConfSatClicked(){
+    /* Try and open a file for output */
+//    QString outputFilename = filepath;
+//    QFile outputFile(outputFilename);
+//    outputFile.open(QIODevice::WriteOnly);
+
+    /* Check it opened OK */
+//    if(!outputFile.isOpen()){
+//        qDebug() << argv[0] << "- Error, unable to open" << outputFilename << "for output";
+//        return 1;
+//    }
+
+    /* Point a QTextStream object at the file */
+//    QTextStream outStream(&outputFile);
+
+    for (int i = 0 ; i < data_model->rowCount() ; i++) {
+        QString status = QString("%1%2%3%4%5%6")
+                .arg(data_model->item(i,GROUPS_INDEX)->text(),-GROUP_LENGTH,' ')
+                .arg(data_model->item(i,1)->text(),-PARAM_NAME_LENGTH,' ')
+                .arg(data_model->item(i,TYPE_INDEX)->text(),-TYPE_LENGTH,' ')
+                .arg(data_model->item(i,TYPE_UNIT_INDEX)->text(),-TYPE_UNIT_LENGTH,' ')
+                .arg(data_model->item(i,4)->text(),-PARAM_VALUE_LENGTH,' ')
+                .arg(data_model->item(i,NAME_INDEX)->text(),-NOTE_LENGTH,' ');
+        qDebug() << status;
+        /* Write the line to the file */
+//        outStream << status;
+    }
+
+    /* Close the file */
+//    outputFile.close();
+}
+
+void SatConfigSys::onTransferFilesClicked(){
+    ;
+}
 
 
 

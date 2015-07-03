@@ -40,6 +40,7 @@ public slots:
 //    void paramClicked(int number);
 //    void itemUpdated(QStandardItem* item);
 //    void transferFileClicked();
+    void onSaveToConfSatTriggered();
     void onTransferFilesTriggered();
     void onParamClicked();
     void onStationClicked();
@@ -47,6 +48,8 @@ public slots:
 
 signals:
     void transferFilesClicked();
+    void saveToConfSatClicked();
+
 //private slots:
 //    void createLayout(int n, QWidget *parent, QList<QPushButton*> buttons);
 
