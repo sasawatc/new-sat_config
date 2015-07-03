@@ -212,7 +212,8 @@ void SatConfigSys::onSaveToConfSatClicked(){
 void SatConfigSys::saveToConfSat(){
     /* Try and open a file for output */
     QFile outputFile(SAT_CONFIG_PATH);
-
+    outputFile.rename(getFileNameWithDateTimeUtc("conf_sat", ".txt"));
+    outputFile.setFileName(SAT_CONFIG_PATH);
     /* Check it opened OK */
     if(!outputFile.open(QIODevice::WriteOnly)){
         qDebug() << "Error, unable to open" << SAT_CONFIG_PATH << "for output";
@@ -241,7 +242,7 @@ void SatConfigSys::saveToConfSat(){
                 .arg(data_model->item(i,NOTE_INDEX)->text(),-NOTE_LENGTH,' ');
         qDebug() << status  << "\r\n";
         /* Write the line to the file */
-//        outStream << status;
+        outStream << status << "\r\n";
     }
 
     /* Close the file */
@@ -256,7 +257,7 @@ void SatConfigSys::onTransferFilesClicked(){
     if (reply == QMessageBox::Save)
     {
         qDebug() << "Save was clicked";
-        saveGroupsToFile();
+        transferFiles();
     }
     else
     {
@@ -285,7 +286,7 @@ void SatConfigSys::transferMpcAocs(QString filepath){
     /* Point a QTextStream object at the file */
     QTextStream outStream(&outputFile);
     //File first line title
-//    outStream << "$SATELLITE_CONF" << "\r\n";
+    outStream << "$SATELLITE_CONF" << "\r\n";
     qDebug() << "$SATELLITE_CONF" << "\r\n";
 
     for (int i = 0 ; i < mpc_aocs_proxyModel->rowCount() ; i++) {
@@ -302,11 +303,11 @@ void SatConfigSys::transferMpcAocs(QString filepath){
         QString status = QString("%1=%2")
                 .arg(mpc_aocs_proxyModel->index(i,NAME_INDEX).data().toString())
                 .arg(value);
-        qDebug() << status << "\r\n";
         /* Write the line to the file */
-//        outStream << status;
+        outStream << status << "\r\n";
+                qDebug() << status << "\r\n";
     }
-//    outStream << "$END";
+    outStream << "$END";
     qDebug() << "$END";
     outputFile.close();
 }
@@ -323,7 +324,7 @@ void SatConfigSys::transferFds(QString filepath){
     /* Point a QTextStream object at the file */
     QTextStream outStream(&outputFile);
     //File first line title
-//    outStream << "$SATELLITE_CONF" << "\r\n";
+    outStream << "$SATELLITE_CONF" << "\r\n";
     qDebug() << "$SATELLITE_CONF" << "\r\n";
 
     for (int i = 0 ; i < fds_proxyModel->rowCount() ; i++) {
@@ -342,9 +343,10 @@ void SatConfigSys::transferFds(QString filepath){
                 .arg(value);
         qDebug() << status << "\r\n";
         /* Write the line to the file */
-//        outStream << status;
+        outStream << status << "\r\n";
+                qDebug() << status << "\r\n";
     }
-//    outStream << "$END";
+    outStream << "$END";
     qDebug() << "$END";
     outputFile.close();
 }

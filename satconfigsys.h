@@ -53,8 +53,6 @@ public slots:
 private:
     void importSatConfig(QString filepath);
     void initDataModel();
-    void saveGroupsToFile();
-
 
 
 
