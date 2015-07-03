@@ -50,6 +50,11 @@ void MainWindow::setModel(QSortFilterProxyModel *scc_model, QSortFilterProxyMode
     ui->mpc_pl_tableView->hideColumn(GROUPS_INDEX);
     ui->mpc_aocs_tableView->hideColumn(GROUPS_INDEX);
     ui->fds_tableView->hideColumn(GROUPS_INDEX);
+
+    ui->scc_tableView->hideColumn(TYPE_UNIT_INDEX);
+    ui->mpc_pl_tableView->hideColumn(TYPE_UNIT_INDEX);
+    ui->mpc_aocs_tableView->hideColumn(TYPE_UNIT_INDEX);
+    ui->fds_tableView->hideColumn(TYPE_UNIT_INDEX);
 }
 
 void MainWindow::createButtons(QSortFilterProxyModel *scc_model, QSortFilterProxyModel *mpc_pl_model, QSortFilterProxyModel *mpc_aocs_model, QSortFilterProxyModel *fds_model, QList<Station *> *stations, QList<Satellite *> *satellites)
@@ -71,7 +76,7 @@ void MainWindow::createButtons(QSortFilterProxyModel *scc_model, QSortFilterProx
             QString param_name = scc_model->data(index).toString();
             scc_listButton.append(new ParamPushButton(param_name, scc_model, index, this));
             ui->scc_gridLayout->addWidget(scc_listButton[i], i/6, i%6);
-            connect(scc_listButton[i], SIGNAL(clicked()), this, SLOT(paramClicked()));
+            connect(scc_listButton[i], SIGNAL(clicked()), this, SLOT(onParamClicked()));
             b_active = true;
         }
         //MPC_AOCS
@@ -81,7 +86,7 @@ void MainWindow::createButtons(QSortFilterProxyModel *scc_model, QSortFilterProx
             QString param_name = mpc_aocs_model->data(index).toString();
             mpc_aocs_listButton.append(new ParamPushButton(param_name, mpc_aocs_model, index, this));
             ui->mpc_aocs_gridLayout->addWidget(mpc_aocs_listButton[i], i/6, i%6);
-            connect(mpc_aocs_listButton[i], SIGNAL(clicked()), this, SLOT(paramClicked()));
+            connect(mpc_aocs_listButton[i], SIGNAL(clicked()), this, SLOT(onParamClicked()));
             b_active = true;
         }
         //FDS
@@ -91,7 +96,7 @@ void MainWindow::createButtons(QSortFilterProxyModel *scc_model, QSortFilterProx
             QString param_name = fds_model->data(index).toString();
             fds_listButton.append(new ParamPushButton(param_name, fds_model, index, this));
             ui->fds_gridLayout->addWidget(fds_listButton[i], i/6, i%6);
-            connect(fds_listButton[i], SIGNAL(clicked()), this, SLOT(paramClicked()));
+            connect(fds_listButton[i], SIGNAL(clicked()), this, SLOT(onParamClicked()));
             b_active = true;
         }
         i++;
@@ -108,7 +113,7 @@ void MainWindow::createButtons(QSortFilterProxyModel *scc_model, QSortFilterProx
             QString param_name = mpc_pl_model->data(stations->at(i)->name_index).toString();
             mpc_pl_stations_listButton.append(new ParamPushButton(param_name, mpc_pl_model, stations->at(i), this));
             ui->mpc_pl_stations_gridLayout->addWidget(mpc_pl_stations_listButton[i], i/4, i%4);
-            connect(mpc_pl_stations_listButton[i], SIGNAL(clicked()), this, SLOT(stationClicked()));
+            connect(mpc_pl_stations_listButton[i], SIGNAL(clicked()), this, SLOT(onStationClicked()));
             b_active = true;
         }
         if(i < satellites->size())
@@ -140,7 +145,7 @@ void MainWindow::createSatelliteButtons(QGridLayout *gridLayout, QSortFilterProx
             QString param_name = mpc_pl_model->data(satellite->mission_constraints_name[i]).toString();
             mpc_pl_satellites_listButton.append(new ParamPushButton(param_name, mpc_pl_model, satellite->mission_constraints_name[i], this));
             gridLayout->addWidget(mpc_pl_satellites_listButton[i], i/4, i%4);
-            connect(mpc_pl_satellites_listButton[i], SIGNAL(clicked()), this, SLOT(satelliteClicked()));
+            connect(mpc_pl_satellites_listButton[i], SIGNAL(clicked()), this, SLOT(onSatelliteClicked()));
             b_active = true;
         }
         if(i < satellite->system_constraints_name.count())
@@ -148,7 +153,7 @@ void MainWindow::createSatelliteButtons(QGridLayout *gridLayout, QSortFilterProx
             QString param_name = mpc_pl_model->data(satellite->system_constraints_name[i]).toString();
             mpc_pl_satellites_listButton.append(new ParamPushButton(param_name, mpc_pl_model, satellite->system_constraints_name[i], this));
             gridLayout->addWidget(mpc_pl_satellites_listButton[i], i/4, i%4);
-            connect(mpc_pl_satellites_listButton[i], SIGNAL(clicked()), this, SLOT(satelliteClicked()));
+            connect(mpc_pl_satellites_listButton[i], SIGNAL(clicked()), this, SLOT(onSatelliteClicked()));
             b_active = true;
         }
         i++;
@@ -158,7 +163,7 @@ void MainWindow::createSatelliteButtons(QGridLayout *gridLayout, QSortFilterProx
 
 
 
-void MainWindow::paramClicked()
+void MainWindow::onParamClicked()
 {
     qDebug() << "Text: " << ((ParamPushButton *) sender())->text();
     QModelIndex sender_index = ((ParamPushButton *) sender())->getIndex();
@@ -172,7 +177,7 @@ void MainWindow::paramClicked()
     edit_dialog.exec();
 }
 
-void MainWindow::stationClicked()
+void MainWindow::onStationClicked()
 {
     qDebug() << "Text: " << ((ParamPushButton *) sender())->text();
 
@@ -184,7 +189,7 @@ void MainWindow::stationClicked()
 
 }
 
-void MainWindow::satelliteClicked()
+void MainWindow::onSatelliteClicked()
 {
     qDebug() << "Text: " << ((ParamPushButton *) sender())->text();
     QModelIndex sender_index = ((ParamPushButton *) sender())->getIndex();

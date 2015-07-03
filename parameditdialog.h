@@ -26,8 +26,8 @@ private:
     QSortFilterProxyModel *proxy_model;
 
 public slots:
-    void setParameterClicked();
-    void closeClicked();
+    void onSetParameterClicked();
+    void onCloseClicked();
 };
 
 #endif // PARAMEDITDIALOG_H

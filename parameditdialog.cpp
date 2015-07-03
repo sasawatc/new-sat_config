@@ -22,21 +22,21 @@ ParamEditDialog::ParamEditDialog(QSortFilterProxyModel *model, const QModelIndex
     ui->param_name_label->setText(param_name);
     ui->old_value_lineEdit->setText(old_value);
 
-    connect(ui->set_param_pushButton, SIGNAL(clicked()), this, SLOT(setParameterClicked()));
-    connect(ui->close_pushButton, SIGNAL(clicked()), this, SLOT(closeClicked()));
+    connect(ui->set_param_pushButton, SIGNAL(clicked()), this, SLOT(onSetParameterClicked()));
+    connect(ui->close_pushButton, SIGNAL(clicked()), this, SLOT(onCloseClicked()));
 }
 
-void ParamEditDialog::setParameterClicked()
+void ParamEditDialog::onSetParameterClicked()
 {
     QString new_value = ui->new_value_lineEdit->text();
 
     QModelIndex new_value_index = proxy_model->index(model_index.row(), VALUE_NEW_INDEX);
     proxy_model->setData(new_value_index, new_value);
 
-    closeClicked();
+    onCloseClicked();
 }
 
-void ParamEditDialog::closeClicked()
+void ParamEditDialog::onCloseClicked()
 {
     this->close();
 }

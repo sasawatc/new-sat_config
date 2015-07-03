@@ -269,7 +269,7 @@ debug/moc_mainwindow.cpp: globalcontext.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
 		mainwindow.h
-	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/sat_config/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/GitHub/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_parameditdialog.cpp: globalcontext.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
@@ -381,12 +381,12 @@ debug/moc_parameditdialog.cpp: globalcontext.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
 		parameditdialog.h
-	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/sat_config/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore parameditdialog.h -o debug\moc_parameditdialog.cpp
+	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/GitHub/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore parameditdialog.h -o debug\moc_parameditdialog.cpp
 
-debug/moc_stationeditdialog.cpp: station.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QList \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlist.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+debug/moc_stationeditdialog.cpp: globalcontext.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qchar.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qglobal.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qconfig.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfeatures.h \
@@ -415,15 +415,17 @@ debug/moc_stationeditdialog.cpp: station.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmutex.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qiterator.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qrefcount.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstring.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydata.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		station.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QList \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
@@ -494,7 +496,7 @@ debug/moc_stationeditdialog.cpp: station.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
 		stationeditdialog.h
-	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/sat_config/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore stationeditdialog.h -o debug\moc_stationeditdialog.cpp
+	C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.5.0/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/sasaw/Documents/GitHub/new sat_config" -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtANGLE -IC:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore stationeditdialog.h -o debug\moc_stationeditdialog.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1345,10 +1347,10 @@ debug/station.o: station.cpp station.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\station.o station.cpp
 
 debug/stationeditdialog.o: stationeditdialog.cpp stationeditdialog.h \
-		station.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QList \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlist.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		globalcontext.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qchar.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qglobal.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qconfig.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfeatures.h \
@@ -1377,15 +1379,17 @@ debug/stationeditdialog.o: stationeditdialog.cpp stationeditdialog.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmutex.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qiterator.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qrefcount.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstring.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydata.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		station.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QList \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
@@ -1472,6 +1476,13 @@ debug/stationeditdialog.o: stationeditdialog.cpp stationeditdialog.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QDialogButtonBox \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QFormLayout \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qformlayout.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QLayout \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QHeaderView \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
@@ -1489,15 +1500,13 @@ debug/stationeditdialog.o: stationeditdialog.cpp stationeditdialog.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlabel.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QTableWidget \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qtablewidget.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qtableview.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\stationeditdialog.o stationeditdialog.cpp
 

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'parameditdialog.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'parameditdialog.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.4.1. It"
+#error "This file was generated using the moc from 5.5.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,23 +20,23 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ParamEditDialog_t {
     QByteArrayData data[4];
-    char stringdata[50];
+    char stringdata0[54];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_ParamEditDialog_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_ParamEditDialog_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_ParamEditDialog_t qt_meta_stringdata_ParamEditDialog = {
     {
 QT_MOC_LITERAL(0, 0, 15), // "ParamEditDialog"
-QT_MOC_LITERAL(1, 16, 19), // "setParameterClicked"
-QT_MOC_LITERAL(2, 36, 0), // ""
-QT_MOC_LITERAL(3, 37, 12) // "closeClicked"
+QT_MOC_LITERAL(1, 16, 21), // "onSetParameterClicked"
+QT_MOC_LITERAL(2, 38, 0), // ""
+QT_MOC_LITERAL(3, 39, 14) // "onCloseClicked"
 
     },
-    "ParamEditDialog\0setParameterClicked\0"
-    "\0closeClicked"
+    "ParamEditDialog\0onSetParameterClicked\0"
+    "\0onCloseClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,9 +68,10 @@ void ParamEditDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         ParamEditDialog *_t = static_cast<ParamEditDialog *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->setParameterClicked(); break;
-        case 1: _t->closeClicked(); break;
+        case 0: _t->onSetParameterClicked(); break;
+        case 1: _t->onCloseClicked(); break;
         default: ;
         }
     }
@@ -91,7 +92,7 @@ const QMetaObject *ParamEditDialog::metaObject() const
 void *ParamEditDialog::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_ParamEditDialog.stringdata))
+    if (!strcmp(_clname, qt_meta_stringdata_ParamEditDialog.stringdata0))
         return static_cast<void*>(const_cast< ParamEditDialog*>(this));
     return QDialog::qt_metacast(_clname);
 }

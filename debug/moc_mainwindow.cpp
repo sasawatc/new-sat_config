@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[5];
-    char stringdata0[57];
+    char stringdata0[63];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,14 +30,14 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 12), // "paramClicked"
-QT_MOC_LITERAL(2, 24, 0), // ""
-QT_MOC_LITERAL(3, 25, 14), // "stationClicked"
-QT_MOC_LITERAL(4, 40, 16) // "satelliteClicked"
+QT_MOC_LITERAL(1, 11, 14), // "onParamClicked"
+QT_MOC_LITERAL(2, 26, 0), // ""
+QT_MOC_LITERAL(3, 27, 16), // "onStationClicked"
+QT_MOC_LITERAL(4, 44, 18) // "onSatelliteClicked"
 
     },
-    "MainWindow\0paramClicked\0\0stationClicked\0"
-    "satelliteClicked"
+    "MainWindow\0onParamClicked\0\0onStationClicked\0"
+    "onSatelliteClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,9 +73,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->paramClicked(); break;
-        case 1: _t->stationClicked(); break;
-        case 2: _t->satelliteClicked(); break;
+        case 0: _t->onParamClicked(); break;
+        case 1: _t->onStationClicked(); break;
+        case 2: _t->onSatelliteClicked(); break;
         default: ;
         }
     }

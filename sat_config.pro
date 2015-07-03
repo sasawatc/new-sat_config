@@ -38,5 +38,7 @@ FORMS    += mainwindow.ui \
     parameditdialog.ui \
     stationeditdialog.ui
 
+OTHER_FILES += conf_sat.txt
+
 #CONFIG   += console
 #CONFIG   -= app_bundle

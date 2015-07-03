@@ -40,9 +40,9 @@ public slots:
 //    void paramClicked(int number);
 //    void itemUpdated(QStandardItem* item);
 //    void transferFileClicked();
-    void paramClicked();
-    void stationClicked();
-    void satelliteClicked();
+    void onParamClicked();
+    void onStationClicked();
+    void onSatelliteClicked();
 
 private slots:
 //    void createLayout(int n, QWidget *parent, QList<QPushButton*> buttons);
