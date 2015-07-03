@@ -11,14 +11,15 @@
 #include <QApplication>
 #include <QFile>
 #include <QMessageBox>
+#include <QObject>
 
 
-class SatConfigSys
+class SatConfigSys :QObject
 {
+    Q_OBJECT
 public:
     SatConfigSys(int argc, char *argv[]);
     ~SatConfigSys();
-
 
 //    static const QString SAT_CONFIG_PATH = "conf_sat.txt";
 
@@ -33,6 +34,9 @@ public:
     QString getCurrentParamValue(QSortFilterProxyModel* model, int row);
     QList<Station *> * getStationsFromMpcPl();
     QList<Satellite *> * getSatellitesFromMpcPl();
+
+public slots:
+    void ontransferFilesClicked();
 
 private:
     void importSatConfig(QString filepath);

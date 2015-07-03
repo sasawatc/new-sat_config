@@ -35,7 +35,7 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
     main_window.setModel(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel);
     main_window.createButtons(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel, stations, satellites);
 
-
+//    connect(main_window, SIGNAL())
 
 
     app.exec();
@@ -44,6 +44,10 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
 SatConfigSys::~SatConfigSys()
 {
 
+}
+
+void SatConfigSys::ontransferFilesClicked(){
+    return;
 }
 
 void SatConfigSys::importSatConfig(QString filepath)

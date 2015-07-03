@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mpc_pl_tableView->verticalHeader()->setVisible(false);
     ui->mpc_aocs_tableView->verticalHeader()->setVisible(false);
     ui->fds_tableView->verticalHeader()->setVisible(false);
-
+    connect(ui->actionTransfer_files,SIGNAL(triggered()),this,SLOT(onTransferFilesTriggered()));
 
 
 }
@@ -197,6 +197,10 @@ void MainWindow::satelliteClicked()
     edit_dialog.setModal(true);
     edit_dialog.exec();
 
+}
+
+void MainWindow::onTransferFilesTriggered(){
+    emit transferFilesClicked();
 }
 
 MainWindow::~MainWindow()

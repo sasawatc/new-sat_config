@@ -43,8 +43,11 @@ public slots:
     void paramClicked();
     void stationClicked();
     void satelliteClicked();
+    void onTransferFilesTriggered();
 
-private slots:
+signals:
+    void transferFilesClicked();
+//private slots:
 //    void createLayout(int n, QWidget *parent, QList<QPushButton*> buttons);
 
 private:
