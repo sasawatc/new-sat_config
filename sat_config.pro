@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     parameditdialog.cpp \
     station.cpp \
     stationeditdialog.cpp \
-    satellite.cpp
+    satellite.cpp \
+    passworddialog.cpp
 
 HEADERS  += mainwindow.h \
     satconfigsys.h \
@@ -31,12 +32,14 @@ HEADERS  += mainwindow.h \
     station.h \
     stationeditdialog.h \
     ui_stationeditdialog.h \
-    satellite.h
+    satellite.h \
+    passworddialog.h
 
 
 FORMS    += mainwindow.ui \
     parameditdialog.ui \
-    stationeditdialog.ui
+    stationeditdialog.ui \
+    passworddialog.ui
 
 OTHER_FILES += conf_sat.txt
 
