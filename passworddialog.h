@@ -14,6 +14,10 @@ class PasswordDialog : public QDialog
 public:
     explicit PasswordDialog(QWidget *parent = 0);
     ~PasswordDialog();
+    QString getText();
+
+private slots:
+    void on_buttonBox_accepted();
 
 private:
     Ui::PasswordDialog *ui;

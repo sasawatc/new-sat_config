@@ -12,3 +12,13 @@ PasswordDialog::~PasswordDialog()
 {
     delete ui;
 }
+
+QString PasswordDialog::getText()
+{
+    return this->ui->lineEdit->text()
+}
+
+void PasswordDialog::on_buttonBox_accepted()
+{
+    return
+}
