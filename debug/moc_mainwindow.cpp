@@ -19,8 +19,13 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
+<<<<<<< HEAD
     QByteArrayData data[7];
     char stringdata[103];
+=======
+    QByteArrayData data[5];
+    char stringdata0[63];
+>>>>>>> origin/master
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,6 +35,7 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
+<<<<<<< HEAD
 QT_MOC_LITERAL(1, 11, 20), // "transferFilesClicked"
 QT_MOC_LITERAL(2, 32, 0), // ""
 QT_MOC_LITERAL(3, 33, 12), // "paramClicked"
@@ -41,6 +47,16 @@ QT_MOC_LITERAL(6, 78, 24) // "onTransferFilesTriggered"
     "MainWindow\0transferFilesClicked\0\0"
     "paramClicked\0stationClicked\0"
     "satelliteClicked\0onTransferFilesTriggered"
+=======
+QT_MOC_LITERAL(1, 11, 14), // "onParamClicked"
+QT_MOC_LITERAL(2, 26, 0), // ""
+QT_MOC_LITERAL(3, 27, 16), // "onStationClicked"
+QT_MOC_LITERAL(4, 44, 18) // "onSatelliteClicked"
+
+    },
+    "MainWindow\0onParamClicked\0\0onStationClicked\0"
+    "onSatelliteClicked"
+>>>>>>> origin/master
 };
 #undef QT_MOC_LITERAL
 
@@ -83,11 +99,17 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         MainWindow *_t = static_cast<MainWindow *>(_o);
         switch (_id) {
+<<<<<<< HEAD
         case 0: _t->transferFilesClicked(); break;
         case 1: _t->paramClicked(); break;
         case 2: _t->stationClicked(); break;
         case 3: _t->satelliteClicked(); break;
         case 4: _t->onTransferFilesTriggered(); break;
+=======
+        case 0: _t->onParamClicked(); break;
+        case 1: _t->onStationClicked(); break;
+        case 2: _t->onSatelliteClicked(); break;
+>>>>>>> origin/master
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

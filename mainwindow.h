@@ -40,10 +40,16 @@ public slots:
 //    void paramClicked(int number);
 //    void itemUpdated(QStandardItem* item);
 //    void transferFileClicked();
+<<<<<<< HEAD
     void paramClicked();
     void stationClicked();
     void satelliteClicked();
     void onTransferFilesTriggered();
+=======
+    void onParamClicked();
+    void onStationClicked();
+    void onSatelliteClicked();
+>>>>>>> origin/master
 
 signals:
     void transferFilesClicked();

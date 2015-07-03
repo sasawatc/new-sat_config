@@ -11,7 +11,7 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
 
     data_model = new QStandardItemModel(0, 6, &main_window);
     initDataModel();
-    importSatConfig(sat_config_path);
+    importSatConfig(SAT_CONFIG_PATH);
 
 
     scc_proxyModel = new QSortFilterProxyModel(&main_window);
@@ -19,10 +19,10 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
     mpc_aocs_proxyModel = new QSortFilterProxyModel(&main_window);
     fds_proxyModel = new QSortFilterProxyModel(&main_window);
 
-    scc_proxyModel->setFilterFixedString(scc_str);
-    mpc_pl_proxyModel->setFilterFixedString(mpc_pl_str);
-    mpc_aocs_proxyModel->setFilterFixedString(mpc_aocs_str);
-    fds_proxyModel->setFilterFixedString(fds_str);
+    scc_proxyModel->setFilterFixedString(SCC_STR);
+    mpc_pl_proxyModel->setFilterFixedString(MPC_PL_STR);
+    mpc_aocs_proxyModel->setFilterFixedString(MPC_AOCS_STR);
+    fds_proxyModel->setFilterFixedString(FDS_STR);
 
     scc_proxyModel->setSourceModel(data_model);
     mpc_pl_proxyModel->setSourceModel(data_model);
@@ -70,10 +70,10 @@ void SatConfigSys::importSatConfig(QString filepath)
         param_item_list.append(new QStandardItem(param_list.at(GROUPS_FILE_INDEX)));
         param_item_list.append(new QStandardItem(param_list.at(NAME_FILE_INDEX)));
         param_item_list.append(new QStandardItem(param_list.at(VALUE_FILE_INDEX)));
-        //Intentionally skipped column 3, don't need type unit
-        param_item_list.append(new QStandardItem());
+        param_item_list.append(new QStandardItem()); //new value
         param_item_list.append(new QStandardItem(param_list.at(TYPE_FILE_INDEX)));
         param_item_list.append(new QStandardItem(param_list.at(NOTE_FILE_INDEX)));
+        param_item_list.append(new QStandardItem(param_list.at(TYPE_UNIT_FILE_INDEX)));
 
         //Disable editing in all field except for "New Value" column
         for(int i = 0; i < param_item_list.count(); i++)
