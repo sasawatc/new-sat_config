@@ -35,8 +35,8 @@ SatConfigSys::SatConfigSys(int argc, char *argv[])
     main_window.setModel(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel);
     main_window.createButtons(scc_proxyModel, mpc_pl_proxyModel, mpc_aocs_proxyModel, fds_proxyModel, stations, satellites);
 
-    connect(&main_window, SIGNAL(transferFilesTriggered()),this,SLOT(onTransferFilesClicked()));
-    connect(&main_window, SIGNAL(saveToConfSatClicke()),this,SLOT(onSaveToConfSatClicked()));
+    connect(&main_window, SIGNAL(transferFilesClicked()),this,SLOT(onTransferFilesClicked()));
+    connect(&main_window, SIGNAL(saveToConfSatClicked()),this,SLOT(onSaveToConfSatClicked()));
 
 
     app.exec();
@@ -212,11 +212,11 @@ void SatConfigSys::onSaveToConfSatClicked(){
     for (int i = 0 ; i < data_model->rowCount() ; i++) {
         QString status = QString("%1%2%3%4%5%6")
                 .arg(data_model->item(i,GROUPS_INDEX)->text(),-GROUP_LENGTH,' ')
-                .arg(data_model->item(i,1)->text(),-PARAM_NAME_LENGTH,' ')
+                .arg(data_model->item(i,NAME_INDEX)->text(),-NAME_LENGTH,' ')
                 .arg(data_model->item(i,TYPE_INDEX)->text(),-TYPE_LENGTH,' ')
                 .arg(data_model->item(i,TYPE_UNIT_INDEX)->text(),-TYPE_UNIT_LENGTH,' ')
-                .arg(data_model->item(i,4)->text(),-PARAM_VALUE_LENGTH,' ')
-                .arg(data_model->item(i,NAME_INDEX)->text(),-NOTE_LENGTH,' ');
+                .arg(data_model->item(i,VALUE_INDEX)->text(),-VALUE_LENGTH,' ')
+                .arg(data_model->item(i,NOTE_INDEX)->text(),-NOTE_LENGTH,' ');
         qDebug() << status;
         /* Write the line to the file */
 //        outStream << status;
