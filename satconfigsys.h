@@ -6,12 +6,15 @@
 #include "station.h"
 #include "satellite.h"
 
+#include <QObject>
+#include <QApplication>
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
-#include <QApplication>
 #include <QFile>
 #include <QMessageBox>
-#include <QObject>
+#include <QDateTime>
+#include <QXmlStreamWriter>
+#include <QXmlStreamAttributes>
 
 
 class SatConfigSys :QObject
@@ -34,6 +37,14 @@ public:
     QString getCurrentParamValue(QSortFilterProxyModel* model, int row);
     QList<Station *> * getStationsFromMpcPl();
     QList<Satellite *> * getSatellitesFromMpcPl();
+    QString getFileNameWithDateTimeUtc(QString initial_filename, QString file_extension);
+
+    void transferMpcPl(QString filepath);
+    void transferMpcAocs(QString filepath);
+    void transferFds(QString filepath);
+
+    void saveToConfSat();
+    void transferFiles();
 
 public slots:
     void onTransferFilesClicked();

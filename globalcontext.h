@@ -39,6 +39,11 @@ static const int VALUE_LENGTH =111- 90;
 static const int NOTE_LENGTH = 0;
 
 static const QString SAT_CONFIG_PATH = "conf_sat.txt";
+static const QString SAT_CONFIG_DIRECTORY = "";
+
+static const QString MPC_PL_DIRECTORY = "";
+static const QString MPC_AOCS_DIRECTORY = "";
+static const QString FDS_DIRECTORY = "";
 
 static const QString SCC_STR = "SCC";
 static const QString MPC_PL_STR = "MPC_PL";

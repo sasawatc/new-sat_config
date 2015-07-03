@@ -15,10 +15,10 @@ PasswordDialog::~PasswordDialog()
 
 QString PasswordDialog::getText()
 {
-    return this->ui->lineEdit->text()
+    return this->ui->lineEdit->text();
 }
 
 void PasswordDialog::on_buttonBox_accepted()
 {
-    return
+    return;
 }
